@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Minion"
+parent: Essence Toolchain
 ---
 # Minion
 

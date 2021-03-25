@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Savile Row"
-parent: toolchain
+parent: Essence Toolchain
 ---
 # Savile Row
 
