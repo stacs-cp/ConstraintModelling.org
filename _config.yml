@@ -1,7 +1,8 @@
 title: ConstraintModelling.org
 description: AI research group 
 # https://github.com/CloudCannon/edition-jekyll-template
-remote_theme: CloudCannon/edition-jekyll-template
+remote_theme: pmarsceill/just-the-docs
+ #remote_theme: CloudCannon/edition-jekyll-template
 header_pages:
   - index.md
   - team.md 
@@ -9,5 +10,3 @@ header_pages:
   - projects.md 
   - publications.md
   - demos.md
-
-feed_meta : ""
