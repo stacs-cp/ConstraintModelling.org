@@ -13,4 +13,3 @@ header_pages:
 
 plugins:
   - jekyll-remote-theme
-  - jekyll-scholar
