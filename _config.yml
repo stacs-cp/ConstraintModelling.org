@@ -1,0 +1,8 @@
+title: ConstraintModelling.org
+description: CP tools
+theme: minima
+minima:
+  skin: solarized-dark
+header_pages:
+  - index.md
+  - contact.md
