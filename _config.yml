@@ -1,8 +1,8 @@
 title: ConstraintModelling.org
 description: CP tools
-theme: minima
-minima:
-  skin: solarized-dark
+remote_theme: aterenin/minima-reboot
+#minima:
+#  skin: solarized-dark
 header_pages:
   - index.md
   - contact.md
