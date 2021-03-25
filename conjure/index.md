@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conjure
-parent: toolchain
+parent: Essence Toolchain
 ---
 
 # Conjure

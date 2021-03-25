@@ -10,7 +10,6 @@ header_pages:
   - projects.md 
   - publications.md
   - demos.md
-  - conjure/index.md
-  
+
 plugins:
   - jekyll-remote-theme
