@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The Projects"
+title: "Projects"
 ---
 
 + Topics:
