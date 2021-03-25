@@ -28,9 +28,9 @@ nav_order: 2
 <br> 
 <br>
 
-![](./images/Joan.jpg){: width="150" } | ![](./images/Ruth.jpeg){: width="150" }| ![](./images/MunSee.jpg){: width="150" }
+![](./images/joan.png){: width="150" } | ![](./images/Ruth.jpeg){: width="150" }| ![](./images/MunSee.jpg){: width="150" }
 :-------------------------:|:-------------------------:|:-------------------------:
-<span style="text-align: center;"> [**Joan Espasa Arxer**]() <br> *University of St Andrews*</span> |  <span style="text-align: center;"> [**Ruth Hoffmann**](https://rh347.host.cs.st-andrews.ac.uk/) <br> *University of St Andrews*</span> | <span style="text-align: center;"> [**Mun See Chang**]() <br> *University of St Andrews*</span>
+<span style="text-align: center;"> [**Joan Espasa Arxer**](https://joanespasa.github.io/) <br> *University of St Andrews*</span> |  <span style="text-align: center;"> [**Ruth Hoffmann**](https://rh347.host.cs.st-andrews.ac.uk/) <br> *University of St Andrews*</span> | <span style="text-align: center;"> [**Mun See Chang**]() <br> *University of St Andrews*</span>
 
 <br> 
 <br>
