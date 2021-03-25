@@ -7,4 +7,25 @@ We offer below a complete constraint modelling toolchain that, starting with a c
 
 ![The toolchain](images/pipeline.png)
 
+Content tests:
+
+{% highlight bash %}
+#!/bin/bash
+# Passing arguments to a function
+print_something () {
+echo Hello $1
+}
+print_something World
+{% endhighlight %}
+
+```html
+<html>
+  <head>
+  </head>
+  <body>
+    <p>Hello, World!</p>
+  </body>
+</html>
+```
+
 test
