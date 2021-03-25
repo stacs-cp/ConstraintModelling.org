@@ -1,7 +1,7 @@
 title: ConstraintModelling.org
 description: AI research group 
-# https://github.com/aterenin/minima-reboot/
-remote_theme: aterenin/minima-reboot
+# https://github.com/CloudCannon/edition-jekyll-template
+remote_theme: CloudCannon/edition-jekyll-template
 header_pages:
   - index.md
   - team.md 
