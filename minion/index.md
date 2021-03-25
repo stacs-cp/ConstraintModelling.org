@@ -2,6 +2,7 @@
 layout: default
 title: "Minion"
 parent: Essence Toolchain
+nav_order: 3
 ---
 # Minion
 

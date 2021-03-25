@@ -2,6 +2,7 @@
 layout: default
 title: Conjure
 parent: Essence Toolchain
+nav_order: 1
 ---
 
 # Conjure
