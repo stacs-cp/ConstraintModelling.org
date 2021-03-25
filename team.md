@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Team"
-nav_order: 2
 ---
 
 # Current members
