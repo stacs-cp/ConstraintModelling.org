@@ -1,5 +1,5 @@
 ---
 layout: default
-title: "The Publications & Talks"
+title: "Publications & Talks"
 ---
 Publications & Talks

@@ -1,8 +1,7 @@
 title: ConstraintModelling.org
-description: CP tools
-theme: minima
-minima:
-  skin: solarized-dark
+description: AI research group 
+# https://github.com/aterenin/minima-reboot/
+remote_theme: aterenin/minima-reboot
 header_pages:
   - index.md
   - team.md 

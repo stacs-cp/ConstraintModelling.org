@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The Essence-Toolchain"
+title: "Essence Toolchain"
 ---
 + Conjure
 + Essence
