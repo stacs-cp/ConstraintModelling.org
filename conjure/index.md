@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Conjure
+parent: toolchain
 ---
 
 # Conjure

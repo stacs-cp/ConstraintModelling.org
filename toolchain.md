@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Essence Toolchain"
+has_children: true
 ---
 + Conjure
 + Essence
