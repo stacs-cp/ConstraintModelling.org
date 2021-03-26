@@ -32,9 +32,9 @@ for bib in bibs do
 
   year = bib['issued']['date-parts'][0][0]
   if printed[year] then
-    print "<p></p>"
+    print "<br><br>"
   else
-    print "<p></p>"
+    print "<br>"
     print "<hr>"
     print "<dt>#{year}</dt>"
     printed[year] = true
@@ -46,8 +46,6 @@ for bib in bibs do
   print "<br>"
   print bib['author'].map {|author| "#{author['given']} #{author['family']}" }
                      .join(", ")
-                     .gsub("{","")
-                     .gsub("}","")
                      .gsub("Peter William Nightingale", "Peter Nightingale")
                      .gsub("James Patrick Wetter", "James Wetter")
                      .gsub("Ian James Miguel", "Ian Miguel")
@@ -68,15 +66,15 @@ for bib in bibs do
   print "\n"
   parts = []
   if bib.key?('container-title') then
-    parts.push(bib['container-title'])
+    parts.push(bib['container-title'].gsub("{","").gsub("}",""))
   end
   if bib.key?('publisher') then
-    parts.push(bib['publisher'])
+    parts.push(bib['publisher'].gsub("{","").gsub("}",""))
   end
   # Render the note if the venue is otherwise unknown
   if parts.empty? then
     if bib.key?('note') then
-      parts.push(bib['note'])
+      parts.push(bib['note'].gsub("{","").gsub("}",""))
     end
   end
   unless parts.empty? then
@@ -86,19 +84,19 @@ for bib in bibs do
 
   if bib.key?('DOI') then
     print "\n<br>"
-    print "DOI: <a href=\"https://doi.org/#{bib['DOI']}\">#{bib['DOI']}</a>"
+    print "DOI: <a href=\"https://doi.org/#{bib['DOI'].gsub("\\","")}\">#{bib['DOI'].gsub("\\","")}</a>"
   end
   if bib.key?('ISBN') then
     print "\n<br>"
-    print "ISBN: <a href=\"http://www.ottobib.com/isbn/#{bib['ISBN']}\">#{bib['ISBN']}</a>"
+    print "ISBN: <a href=\"http://www.ottobib.com/isbn/#{bib['ISBN'].gsub("\\","")}\">#{bib['ISBN'].gsub("\\","")}</a>"
   end
   if bib.key?('URL') then
     print "\n<br>"
-    face = bib['URL']
+    face = bib['URL'].gsub("\\","")
     if face.length > 120 then
-      face = bib['URL'].chars.first(30).join + "...." + bib['URL'].chars.last(30).join
+      face = bib['URL'].gsub("\\","").chars.first(30).join + "...." + bib['URL'].gsub("\\","").chars.last(30).join
     end
-    print "URL: <a href=\"#{bib['URL']}\">#{face}</a>"
+    print "URL: <a href=\"#{bib['URL'].gsub("\\","")}\">#{face}</a>"
   end
   
   print "</dd>"
