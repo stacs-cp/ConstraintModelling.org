@@ -42,7 +42,7 @@ for bib in bibs do
   print "\n"
 
   print "<dd>"
-  print "<b>#{bib['title']}</b>".gsub("ESSENCE", "Essence").gsub("CONJURE", "Conjure")
+  print "<b>#{bib['title']}</b>".gsub("ESSENCE", "Essence").gsub("CONJURE", "Conjure").gsub("{","").gsub("}","")
   print "<br>"
   print bib['author'].map {|author| "#{author['given']} #{author['family']}" }
                      .join(", ")
