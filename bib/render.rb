@@ -2,8 +2,15 @@
 
 require 'bibtex'
 
-contents = File.read('bib/bibliography.bib').gsub('{\"O}zg{\"u}r', 'Özgür')
-                                    .gsub('Akg{\"u}n', 'Akgün')
+contents = File.read('bib/bibliography.bib').gsub('{\"{O}}', "Ö")
+                                            .gsub('{\"{u}}', "ü")
+                                            .gsub("{\\\'{a}}", "á")
+                                            .gsub("\"{O}", "Ö")
+                                            .gsub("\"{u}", "ü")
+                                            .gsub("\'{a}", "á")
+                                            .gsub("\"O", "Ö")
+                                            .gsub("\"u", "ü")
+                                            .gsub("\'a", "á")
 
 bibs = BibTeX.parse(contents).to_citeproc
 
@@ -19,7 +26,6 @@ print '<dl class="dl-horizontal">'
 print "\n\n"
 
 for bib in bibs do
-
   # unless bib.key?('container-title') then
   #   next
   # end
@@ -41,11 +47,6 @@ for bib in bibs do
   print "<br>"
   print bib['author'].map {|author| "#{author['given']} #{author['family']}" }
                      .join(", ")
-                     .gsub("Ozgur", "Özgür")
-                     .gsub("Akgun", "Akgün")
-                     .gsub("{", "")
-                     .gsub("}", "")
-                     .gsub("Özgür Akgün", "<u>Özgür Akgün</u>")
                      .gsub("Peter William Nightingale", "Peter Nightingale")
                      .gsub("James Patrick Wetter", "James Wetter")
                      .gsub("Ian James Miguel", "Ian Miguel")
@@ -58,8 +59,10 @@ for bib in bibs do
                      .gsub("Ian P. Gent", "Ian Gent")
                      .gsub("Ian Philip Gent", "Ian Gent")
                      .gsub("Saad Wasim A Attieh", "Saad Attieh")
-                     .gsub("Andr\\\'as Z. Salamon", "András Z. Salamon")
                      .gsub("Lee Emma Palmer Williamson", "Lee Williamson")
+                     .gsub("Ozgur", "Özgür")
+                     .gsub("Akgun", "Akgün")
+
 
   print "\n"
   parts = []
