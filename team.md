@@ -47,3 +47,21 @@ title: "Team"
 
 
 # Previous members
+
+
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<span style="text-align: center;"> [**Alan Frisch**](https://www.cs.york.ac.uk/people/frisch) <br> *University of York*</span> |  <span style="text-align: center;"> [**Lars Kotthoff**](https://www.cs.uwyo.edu/~larsko/) <br> *University of Wyoming*</span> | <span style="text-align: center;"> [**Bilal Syed Hussain**]() </span> | [**Tom Kelsey**](http://tom.host.cs.st-andrews.ac.uk/) <br> *University of St Andrews*</span>
+
+<br> 
+
+:-------------------------:|:-------------------------:|:-------------------------:
+<span style="text-align: center;"> [**John J McDermott**]() <br> </span> |  <span style="text-align: center;"> [**Angela Miguel**]() <br> *University of St Andrews*</span> | <span style="text-align: center;"> [**Karen Petrie**](https://www.dundee.ac.uk/people/karen-petrie) <br> *University of Dundee* </span>
+
+<br>
+
+:-------------------------:|:-------------------------:|:-------------------------:
+<span style="text-align: center;"> [**Arunas Prokopas**]() <br> </span> |  <span style="text-align: center;"> [**James Wetter**]() <br> </span> | <span style="text-align: center;"> [**Andrea Rendl**](http://andrearendl.com/) <br> *Satalia* </span>
+
+<br>
+
+
