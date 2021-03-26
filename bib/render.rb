@@ -46,6 +46,8 @@ for bib in bibs do
   print "<br>"
   print bib['author'].map {|author| "#{author['given']} #{author['family']}" }
                      .join(", ")
+                     .gsub("{","")
+                     .gsub("}","")
                      .gsub("Peter William Nightingale", "Peter Nightingale")
                      .gsub("James Patrick Wetter", "James Wetter")
                      .gsub("Ian James Miguel", "Ian Miguel")
