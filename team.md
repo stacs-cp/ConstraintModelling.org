@@ -51,7 +51,7 @@ nav_order: 2
 
 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-<span style="text-align: center;"> [**Alan Frisch**](https://www.cs.york.ac.uk/people/frisch) <br> *University of York*</span> |  <span style="text-align: center;"> [**Lars Kotthoff**](https://www.cs.uwyo.edu/~larsko/) <br> *University of Wyoming*</span> | <span style="text-align: center;"> [**Bilal Syed Hussain**]() </span> | [**Tom Kelsey**](http://tom.host.cs.st-andrews.ac.uk/) <br> *University of St Andrews*</span>
+<span style="text-align: center;"> [**Alan Frisch**](https://www.cs.york.ac.uk/people/frisch) <br> *University of York*</span> |  <span style="text-align: center;"> [**Lars Kotthoff**](https://www.cs.uwyo.edu/~larsko/) <br> *University of Wyoming*</span> | <span style="text-align: center;"> [**Bilal Syed Hussain**]() </span> | <span style="text-align: center;">  [**Tom Kelsey**](http://tom.host.cs.st-andrews.ac.uk/) <br> *University of St Andrews*</span>
 
 <br> 
 
