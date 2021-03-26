@@ -32,10 +32,8 @@ for bib in bibs do
 
   year = bib['issued']['date-parts'][0][0]
   if printed[year] then
-    print "<p></p>"
     print "<dt></dt>"
   else
-    print "<p></p>"
     print "<hr>"
     print "<dt>#{year}</dt>"
     printed[year] = true
