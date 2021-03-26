@@ -1533,8 +1533,9 @@
     </defs>
   </defs>
   <a
-     id="a1302"
-     target="conjure">
+     xlink:href="conjure"
+     target=""
+     id="a1302">
     <g
        filter="url(#a)"
        id="g36"
@@ -1660,8 +1661,9 @@
      fill="#3d4752"
      id="path42" />
   <a
-     id="a1318"
-     target="savilerow">
+     xlink:href="savilerow"
+     target=""
+     id="a1318">
     <g
        filter="url(#n)"
        id="g66"
@@ -1928,8 +1930,9 @@
        height="100%" />
   </g>
   <a
-     id="a1332"
-     target="minion">
+     xlink:href="minion"
+     target=""
+     id="a1332">
     <g
        filter="url(#N)"
        id="g130"
