@@ -2,8 +2,15 @@
 
 require 'bibtex'
 
-contents = File.read('bib/bibliography.bib').gsub('{\"O}zg{\"u}r', 'Özgür')
-                                    .gsub('Akg{\"u}n', 'Akgün')
+contents = File.read('bib/bibliography.bib').gsub('{\"{O}}', "Ö")
+                                            .gsub('{\"{u}}', "ü")
+                                            .gsub("{\\\'{a}}", "á")
+                                            .gsub("\"{O}", "Ö")
+                                            .gsub("\"{u}", "ü")
+                                            .gsub("\'{a}", "á")
+                                            .gsub("\"O", "Ö")
+                                            .gsub("\"u", "ü")
+                                            .gsub("\'a", "á")
 
 bibs = BibTeX.parse(contents).to_citeproc
 
@@ -19,17 +26,15 @@ print '<dl class="dl-horizontal">'
 print "\n\n"
 
 for bib in bibs do
-
   # unless bib.key?('container-title') then
   #   next
   # end
 
   year = bib['issued']['date-parts'][0][0]
   if printed[year] then
-    print "<p></p>"
-    print "<dt></dt>"
+    print "<br> <br>"
   else
-    print "<p></p>"
+    print "<br>"
     print "<hr>"
     print "<dt>#{year}</dt>"
     printed[year] = true
@@ -37,15 +42,10 @@ for bib in bibs do
   print "\n"
 
   print "<dd>"
-  print "<b>#{bib['title']}</b>".gsub("ESSENCE", "Essence").gsub("CONJURE", "Conjure")
+  print "<b>#{bib['title']}</b>".gsub("ESSENCE", "Essence").gsub("CONJURE", "Conjure").gsub("{","").gsub("}","")
   print "<br>"
   print bib['author'].map {|author| "#{author['given']} #{author['family']}" }
                      .join(", ")
-                     .gsub("Ozgur", "Özgür")
-                     .gsub("Akgun", "Akgün")
-                     .gsub("{", "")
-                     .gsub("}", "")
-                     .gsub("Özgür Akgün", "<u>Özgür Akgün</u>")
                      .gsub("Peter William Nightingale", "Peter Nightingale")
                      .gsub("James Patrick Wetter", "James Wetter")
                      .gsub("Ian James Miguel", "Ian Miguel")
@@ -58,21 +58,23 @@ for bib in bibs do
                      .gsub("Ian P. Gent", "Ian Gent")
                      .gsub("Ian Philip Gent", "Ian Gent")
                      .gsub("Saad Wasim A Attieh", "Saad Attieh")
-                     .gsub("Andr\\\'as Z. Salamon", "András Z. Salamon")
                      .gsub("Lee Emma Palmer Williamson", "Lee Williamson")
+                     .gsub("Ozgur", "Özgür")
+                     .gsub("Akgun", "Akgün")
+
 
   print "\n"
   parts = []
   if bib.key?('container-title') then
-    parts.push(bib['container-title'])
+    parts.push(bib['container-title'].gsub("{","").gsub("}",""))
   end
   if bib.key?('publisher') then
-    parts.push(bib['publisher'])
+    parts.push(bib['publisher'].gsub("{","").gsub("}",""))
   end
   # Render the note if the venue is otherwise unknown
   if parts.empty? then
     if bib.key?('note') then
-      parts.push(bib['note'])
+      parts.push(bib['note'].gsub("{","").gsub("}",""))
     end
   end
   unless parts.empty? then
@@ -82,19 +84,19 @@ for bib in bibs do
 
   if bib.key?('DOI') then
     print "\n<br>"
-    print "DOI: <a href=\"https://doi.org/#{bib['DOI']}\">#{bib['DOI']}</a>"
+    print "DOI: <a href=\"https://doi.org/#{bib['DOI'].gsub("\\","")}\">#{bib['DOI'].gsub("\\","")}</a>"
   end
   if bib.key?('ISBN') then
     print "\n<br>"
-    print "ISBN: <a href=\"http://www.ottobib.com/isbn/#{bib['ISBN']}\">#{bib['ISBN']}</a>"
+    print "ISBN: <a href=\"http://www.ottobib.com/isbn/#{bib['ISBN'].gsub("\\","")}\">#{bib['ISBN'].gsub("\\","")}</a>"
   end
   if bib.key?('URL') then
     print "\n<br>"
-    face = bib['URL']
+    face = bib['URL'].gsub("\\","")
     if face.length > 120 then
-      face = bib['URL'].chars.first(30).join + "...." + bib['URL'].chars.last(30).join
+      face = bib['URL'].gsub("\\","").chars.first(30).join + "...." + bib['URL'].gsub("\\","").chars.last(30).join
     end
-    print "URL: <a href=\"#{bib['URL']}\">#{face}</a>"
+    print "URL: <a href=\"#{bib['URL'].gsub("\\","")}\">#{face}</a>"
   end
   
   print "</dd>"
